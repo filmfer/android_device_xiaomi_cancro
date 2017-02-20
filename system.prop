@@ -1,3 +1,4 @@
+persist.sys.usb.config=mtp,adb
 ro.vendor.extension_library=libqti-perfd-client.so
 rild.libpath=/vendor/lib/libril-qc-qmi-1.so
 rild.libargs=-d /dev/smd0

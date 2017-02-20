@@ -62,6 +62,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/changepowermode.sh:system/bin/changepowermode.sh
 
+# TWRP
+PRODUCT_COPY_FILES +=   $(LOCAL_PATH)/rootdir/root/twrp.fstab:recovery/root/etc/twrp.fstab
+
 # WiFi
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/WCNSS_cfg.dat:system/etc/firmware/wlan/prima/WCNSS_cfg.dat \
@@ -230,7 +233,6 @@ PRODUCT_PACKAGES += librecovery_updater_cancro
 # Gello
 PRODUCT_PACKAGES += \
     Gello
-
 
 # Permissions
 PRODUCT_COPY_FILES += \

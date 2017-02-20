@@ -160,12 +160,25 @@ BOARD_CACHEIMAGE_PARTITION_SIZE     := 393216000
 BOARD_PERSISTIMAGE_PARTITION_SIZE   := 16384000
 BOARD_FLASH_BLOCK_SIZE              := 131072
 
-# Recovery
-RECOVERY_FSTAB_VERSION             := 2
-TARGET_RECOVERY_DENSITY            := xhdpi
-TARGET_RECOVERY_FSTAB              := $(CANCRO_PATH)/rootdir/root/fstab.qcom
-TARGET_RECOVERY_PIXEL_FORMAT       := "RGBX_8888"
-TARGET_RECOVERY_LCD_BACKLIGHT_PATH := \"/sys/class/leds/lcd-backlight/brightness\"
+# TWRP configuration
+RECOVERY_VARIANT := twrp
+TW_THEME := portrait_hdpi
+BOARD_HAS_NO_REAL_SDCARD                := true
+BOARD_RECOVERY_SWIPE                    := true
+RECOVERY_GRAPHICS_USE_LINELENGTH        := true
+RECOVERY_GRAPHICS_FORCE_USE_LINELENGTH := true
+TARGET_RECOVERY_PIXEL_FORMAT            := "RGBX_8888"
+TARGET_RECOVERY_FSTAB                   := device/xiaomi/cancro/rootdir/root/twrp.fstab
+TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID  := true
+RECOVERY_FSTAB_VERSION                  := 2
+TARGET_RECOVERY_LCD_BACKLIGHT_PATH      := "/sys/class/leds/lcd-backlight/brightness"
+TW_INCLUDE_CRYPTO                       := true
+TW_NO_SCREEN_TIMEOUT                    := true
+TW_NO_SCREEN_BLANK                      := true
+TARGET_RECOVERY_QCOM_RTC_FIX            := true
+BOARD_SUPPRESS_SECURE_ERASE             := true
+BOARD_SUPPRESS_EMMC_WIPE                := true
+RECOVERY_SDCARD_ON_DATA                 := true
 
 # CM Hardware
 BOARD_USES_CYANOGEN_HARDWARE = true
