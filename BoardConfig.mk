@@ -177,6 +177,12 @@ TARGET_RECOVERY_QCOM_RTC_FIX            := true
 BOARD_SUPPRESS_SECURE_ERASE             := true
 BOARD_SUPPRESS_EMMC_WIPE                := true
 RECOVERY_SDCARD_ON_DATA                 := true
+TW_EXCLUDE_SUPERSU := true
+TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
+TW_MAX_BRIGHTNESS := 255
+TW_DEFAULT_BRIGHTNESS := 160
+TW_INCLUDE_NTFS_3G := true
+TW_TARGET_USES_QCOM_BSP := true
 
 # CM Hardware
 BOARD_USES_CYANOGEN_HARDWARE = true
